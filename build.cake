@@ -2,13 +2,13 @@
 #tool nuget:?package=Microsoft.TestPlatform&version=17.6.0
 #tool nuget:?package=coverlet.console&version=3.2.0
 #tool nuget:?package=ReportGenerator&version=5.1.20
-#addin nuget:?package=Cake.Coverlet&version=3.0.4
+#addin nuget:?package=Cake.Coverlet&version=5.1.1
 
 var target = Argument("target", "Default");
 var configuration = Argument("Configuration", "Release");
 var outputDirectory = Argument<DirectoryPath>("OutputDirectory", "output");
 var codeCoverageDirectory = Argument<DirectoryPath>("CodeCoverageDirectory", "output/coverage");
-var packageDirectory = Argument<DirectoryPath>("CodeCoverageDirectory", "output/packages");
+var packageDirectory = Argument<DirectoryPath>("PackageDirectory", "output/packages");
 var solutionFile = Argument("SolutionFile", "gls.sln");
 var versionSuffix = Argument("VersionSuffix", "");
 var nugetDeployFeed = Argument("NugetDeployFeed", "https://api.nuget.org/v3/index.json");
