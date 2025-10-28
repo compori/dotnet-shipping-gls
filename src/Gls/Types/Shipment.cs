@@ -74,5 +74,12 @@ namespace Compori.Shipping.Gls.Types
         /// <value>Die Versandpakete.</value>
         [JsonProperty(PropertyName = "ShipmentUnit")]
         public List<ShipmentUnit> ShipmentUnits { get; set; }
+
+        /// <summary>
+        /// Liefert die Versanddienste zurück.
+        /// </summary>
+        /// <value>Die Versanddienste.</value>
+        [JsonProperty(PropertyName = "Service", NullValueHandling = NullValueHandling.Ignore)]
+        public List<ServiceContainer> Services { get; set; }
     }
 }
